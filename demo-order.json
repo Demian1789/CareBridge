@@ -1,0 +1,12 @@
+{
+  "subjectId": "DEMO-P001",
+  "version": 2,
+  "status": "current",
+  "drug": "虚构药品 A",
+  "dose": "每次 1 片",
+  "frequency": "每日 2 次，早、午餐后",
+  "route": "口服",
+  "durationDays": 7,
+  "dailyCount": 2,
+  "note": "医生已确认的虚构演示医嘱，仅供任务下发测试，不用于真实服药"
+}

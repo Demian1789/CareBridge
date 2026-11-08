@@ -1,0 +1,30 @@
+services:
+  app:
+    build: .
+    env_file: .env
+    environment:
+      HOST: 0.0.0.0
+      PORT: 8000
+    restart: unless-stopped
+    volumes:
+      - task_data:/app/.runtime
+    expose:
+      - "8000"
+  https:
+    image: caddy:2
+    environment:
+      DOMAIN: ${DOMAIN:?请在 .env 中填写 DOMAIN，例如 care.example.com}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - app
+    restart: unless-stopped
+volumes:
+  task_data:
+  caddy_data:
+  caddy_config:

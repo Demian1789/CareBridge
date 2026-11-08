@@ -1,0 +1,9 @@
+*
+!Dockerfile
+!/*.py
+!/*.js
+!/CareBridge_Unified.html
+!/demo-order.json
+!/比赛/
+/比赛/*
+!/比赛/CareBridge_*.html

@@ -1,0 +1,6 @@
+.env
+__pycache__/
+*.webm
+.local-tools/
+.runtime/
+/CareBridge-cloud-deploy.tar.gz
